@@ -51,7 +51,17 @@ public class SystemInfoDAOImpl implements SystemInfoDAO {
 	public List<SystemInfoDTO> loadAllSystemInfo() {
 		String sql = BASE_SQL;
 		try {
-			return jdbcTemplate.query(sql, new SystemInfoRowMapper());
+			//return jdbcTemplate.query(sql, new SystemInfoRowMapper());
+			// Simulating 
+			SystemInfoDTO systemInfoDTO = new SystemInfoDTO();
+                        List<SystemInfoDTO> lst = new ArrayList<>();
+			systemInfoDTO.setSerialNumber("12345");
+			systemInfoDTO.setManufacturer("pitney bowes");
+			systemInfoDTO.setOsName("Window");
+			systemInfoDTO.setRamSize("16GB");
+                        systemInfoDTO.setStorageSize("240GB");
+			lst.add(systemInfoDTO);
+			return lst;
 		} catch (EmptyResultDataAccessException exception) {
 			return Collections.emptyList();
 		}
