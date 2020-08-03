@@ -18,3 +18,4 @@ Yes, you need
 - Execute the SQL file [create.sql](src/main/resources/create.sql) 
 - Add the DB deatils in [systemInfo.properties](src/main/resources/systemInfo.properties)
 - run ```$ mvn spring-boot:run```. 
+- For testing use http://localhost:8080/systemInfo/api/loadAllSystemInfo to get the system info
