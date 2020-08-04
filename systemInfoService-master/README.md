@@ -19,3 +19,5 @@ Yes, you need
 - Add the DB deatils in [systemInfo.properties](src/main/resources/systemInfo.properties)
 - run ```$ mvn spring-boot:run```. 
 - For testing use http://localhost:8080/systemInfo/api/loadAllSystemInfo to get the system info
+- Uncomment line no 54 and comment line 56 to 64 in /src/main/java/com/client/system/info/api/dao/SystemInfoDAOImpl.java to test against MySQL, 
+  this has been done to test with or without DB instance. The future relase will be build using embeeded DB(H2). 
